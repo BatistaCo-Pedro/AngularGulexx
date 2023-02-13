@@ -17,10 +17,11 @@
     "
   >
   Please provide a valid email address.
+  {{ form.get('email')?.errors | json }}
   </div>
   <br />
   <br />
 
   <button type="submit" [disabled]="form.invalid">Send</button>
 </form>
-{{ form.value | json}}
+{{ form.errors | json}}
