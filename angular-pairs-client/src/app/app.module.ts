@@ -1,3 +1,4 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -9,6 +10,7 @@ import { FormsModule, ReactiveFormsModule, FormBuilder } from '@angular/forms';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { CommonModule } from '@angular/common';
 import { TestComponent } from './test/test.component';
+import { LoadDataComponent } from './load-data/load-data.component';
 
 @NgModule({
   imports: [
@@ -17,13 +19,15 @@ import { TestComponent } from './test/test.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   declarations: [
     AppComponent,
     NameEditorComponent,
     ReactiveFormComponent,
     TestComponent,
+    LoadDataComponent,
   ],
   providers: [FormBuilder],
   bootstrap: [AppComponent]
